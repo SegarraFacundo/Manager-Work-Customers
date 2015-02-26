@@ -5,37 +5,45 @@
 		<title>App</title>
 		<link rel="stylesheet" type="text/css" href="../libs/semantic-ui/dist/semantic.css">
 	</head>
-	<body ng-controller="mainController">
-		<div class="ui tiered menu">
+	<body ng-controller="mainController"  class="ui inverted segment">
+		<div class="ui tiered teal menu">
 		  <div class="menu">
-		    <a class="active item" ui-sref="trabajos">
-		      <i class="users icon"></i>
-		      Friends
+		    <a class="item" ui-sref="trabajos.detail">
+		      <i class="grid layout icon"></i>
+		      Trabajos
+		      <div class="ui red tiny label">
+  				23
+			  </div>
 		    </a>
-		    <a class="item" ui-sref="trabajos">
-		      <i class="grid layout icon"></i> Browse
+		    <a class="item" ui-sref="clientes.detail">
+		      <i class="users icon"></i> 
+		      Clientes
 		    </a>
 		    <a class="item">
-		      <i class="mail icon"></i> Messages
+		      <i class="mail icon"></i> Mensajes
+		      <div class="ui tiny label">
+  				23
+			  </div>
 		    </a>
 		    <div class="right menu">
 		      <div class="item">
 		        <div class="ui icon input">
-		          <input type="text" placeholder="Search...">
+		          <input type="text" placeholder="Buscar...">
 		          <i class="search icon"></i>
 		        </div>
 		      </div>
 		      <div class="ui dropdown item">
 		        Más <i class="icon dropdown"></i>
-		        <div class="menu">
-		          <a class="item"><i class="edit icon"></i> Edit Profile</a>
-		          <a class="item"><i class="globe icon"></i> Choose Language</a>
-		          <a class="item"><i class="settings icon"></i> Account Settings</a>
+		        <div class="menu">	
+		          <a class="item"><i class="edit icon"></i> Configuración</a>
+		          <a class="item"><i class="settings icon"></i> Generador Codigo de Barra</a>
+		          <a class="item"><i class="globe icon"></i> Documentacion</a>
+		          <a class="item"><i class="settings icon"></i> Acerca de ...</a>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-		  <div class="ui sub menu">
+		  <div class="ui sub menu" ng-repeat="item to items">
 		    <a class="active item">Pendientes</a>
 		    <a class="item">Add</a>
 		    <a class="item">Remove</a>

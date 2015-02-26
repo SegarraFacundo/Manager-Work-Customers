@@ -1,24 +1,11 @@
-<!-- scripts/views/clientes.html -->
+<!-- scripts/views/trabajos.html -->
 <div class="ui padded grid">
-    <div class="row">
-    	<div class="twelve wide teal column">
-    		<a ui-sref="trabajos.new">New</a>
-		</div>
-		<div class="four wide teal column">
-			<a ui-sref="trabajos.detail">Detail</a>
-		</div>
-    </div>
-    <div class="row">
-    	<div class="twelve wide teal column">
-	      	<div ui-view="viewA">
-	      		viewA
-	      	</div>
+    <div class="black row">
+        <div class="ten wide column">
+            <div ui-view="viewA"></div>
         </div>
-    	<div class="four wide teal column">
-	      	<div ui-view="viewB">	
-	      		viewB
-	      	</div>
-	    </div>
+        <div class="six wide column">
+            <div ui-view="viewB"></div>
+        </div>
     </div>
-</div>  
-<!-- Also a way to navigate -->
+</div>
