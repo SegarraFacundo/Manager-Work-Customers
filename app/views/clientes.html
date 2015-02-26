@@ -1,5 +1,21 @@
 <!-- partials/state2.list.html -->
 <h3>Listado</h3>
-<ul>
-  <li ng-repeat="cliente in clientes">{{ cliente }}</li>
-</ul>
+<form class="ui form">
+  <h4 class="ui dividing header">Personal Information</h4>
+  <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" ng-model="cliente.nombre" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" ng-model="cliente.apellido" name="last-name" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>Nombre: {{cliente.nombre}} Apellido: {{cliente.apellido}}</div>
+  <div class="ui hidden divider"></div>
+  <div class="ui submit button" ng-click="save(cliente)">Register</div>
+</form>
