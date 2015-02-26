@@ -7,22 +7,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('menuTrabajos', {
       url: "trabajos",
-      templateUrl: "views/menuTrabajos.html",
+      templateUrl: "scripts/views/menuTrabajos.html",
       controller: "menuTrabajos"
     })
     .state('menuTrabajos.listado', {
       url: ".listado",
-      templateUrl: "views/trabajos.html",
+      templateUrl: "scripts/views/trabajos.html",
       controller: "controllerTrabajos"
     })
     .state('menuClientes', {
       url: "clientes",
-      templateUrl: "views/menuClientes.html",
+      templateUrl: "scripts/views/menuClientes.html",
       controller: "menuClientes"
     })
     .state('menuClientes.listado', {
       url: ".listado",
-        templateUrl: "views/clientes.html",
+        templateUrl: "scripts/views/clientes.html",
         controller: "controllerClientes"
     })
 });
