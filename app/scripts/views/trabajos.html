@@ -1,5 +1,12 @@
-<!-- partials/state1.list.html -->
-<h3>Listado</h3>
-<ul>
-  <li ng-repeat="trabajo in trabajos">{{ trabajo }}</li>
-</ul>
+<!-- scripts/views/trabajos.html -->
+<div class="row">
+    <div class="span8">
+        <div ui-view="viewA"></div>        
+    </div>
+    <div class="span2">
+   	    <div ui-view="viewB"></div>        
+    </div>
+</div>  
+<!-- Also a way to navigate -->
+<a ui-sref="trabajos.new">New</a>
+<a ui-sref="trabajos.detail">Detail</a>

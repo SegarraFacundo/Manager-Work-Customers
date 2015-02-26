@@ -5,24 +5,65 @@ app.config(function($stateProvider, $urlRouterProvider) {
   //
   // Now set up the states
   $stateProvider
-    .state('menuTrabajos', {
+    .state('trabajos', {
       url: "trabajos",
-      templateUrl: "scripts/views/menuTrabajos.html",
+      templateUrl: "scripts/views/trabajos.html",
       controller: "menuTrabajos"
     })
-    .state('menuTrabajos.listado', {
-      url: ".listado",
-      templateUrl: "scripts/views/trabajos.html",
-      controller: "controllerTrabajos"
+    .state('trabajos.detail', {
+      url: ".detail",
+      views: {  "viewA": {
+                          templateUrl: "scripts/views/trabajo-listado.html",
+                          controller: "controllerTrabajos"
+                         },
+                "viewB": {
+                          templateUrl: "scripts/views/trabajo-detail.html",
+                          controller: "controllerTrabajos"
+                         }
+             }
     })
-    .state('menuClientes', {
+    .state('trabajos.new', {
+      url: ".new",
+      views: {
+                "viewA": {
+                          templateUrl: "scripts/views/trabajo-new.html",
+                          controller: "controllerTrabajos"
+                          },
+                "viewB": {
+                          templateUrl: "scripts/views/trabajo-tools.html",
+                          controller: "controllerTrabajos"
+                         }
+              }
+    })
+    .state('clientes', {
       url: "clientes",
-      templateUrl: "scripts/views/menuClientes.html",
+      templateUrl: "scripts/views/clientes.html",
       controller: "menuClientes"
     })
-    .state('menuClientes.listado', {
-      url: ".listado",
-        templateUrl: "scripts/views/clientes.html",
-        controller: "controllerClientes"
+    .state('clientes.detail', {
+      url: ".detail",
+      views: {  "viewA": {
+                          templateUrl: "scripts/views/cliente-listado.html",
+                          controller: "controllerClientes"
+                         },
+                "viewB": {
+                          templateUrl: "scripts/views/cliente-detail.html",
+                          controller: "controllerClientes"
+                         }
+             }
     })
+    .state('clientes.new', {
+      url: ".new",
+      views: {
+                "viewA": {
+                          templateUrl: "scripts/views/cliente-new.html",
+                          controller: "controllerClientes"
+                          },
+                "viewB": {
+                          templateUrl: "scripts/views/cliente-tools.html",
+                          controller: "controllerClientes"
+                         }
+              }
+    })
+    
 });

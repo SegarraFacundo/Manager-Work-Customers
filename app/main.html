@@ -6,14 +6,32 @@
 		<link rel="stylesheet" type="text/css" href="../libs/semantic-ui/dist/semantic.css">
 	</head>
 	<body ng-controller="mainController">
-		<div>
-    		<!-- Link para las distintas vistas -->
-    		<a ui-sref="menuTrabajos">Menu Trabajos</a>
-    		<a ui-sref="menuClientes">Menu Clientes</a>
+		<div class="ui secondary pointing menu">
+		  <a class="active item" ui-sref="trabajos">
+		    <i class="home icon"></i> Trabajos
+		  </a>
+		  <a class="item" ui-sref="clientes">
+		    <i class="mail icon"></i> Clientes
+		  </a>
+		  <div class="right menu">
+		    <div class="ui dropdown item">
+        	  More
+        	  <i class="icon dropdown"></i>
+        	  <div class="menu">
+          		<a class="item"><i class="edit icon"></i> Edit Profile</a>
+          		<a class="item"><i class="globe icon"></i> Choose Language</a>
+          		<a class="item"><i class="settings icon"></i> Account Settings</a>
+        	  </div>
+      		</div>
+      		<div class="item">
+		      <div class="ui icon input">
+		        <input type="text" placeholder="Busqueda...">
+		        <i class="search link icon"></i>
+		      </div>
+		    </div>
+		  </div>
 		</div>
-		<div>
-    		<div ui-view></div>
-		</div>		
+	 	<div ui-view></div>		
 
 		<!-- Librerias externas -->
 		<script src="../libs/jquery/dist/jquery.js"></script>
