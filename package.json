@@ -1,0 +1,30 @@
+{
+  "name": "Manager-Work-Customers",
+  "version": "0.1.0",
+  "description": "Administrador de trabajos y clientes.",
+  "author": "Facundo Segarra <facundosegarra@yahoo.com>",
+  "license": "MIT",
+  "main": "app/main.html",
+  "scripts": {
+    "start": "nw",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cachi87/Manager-Work-Customers"
+  },
+  "homepage": "https://github.com/cachi87/Manager-Work-Customers",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "nw": "^0.12.0-alpha3"
+  },
+  "window": {
+    "title": "App Imprenta",
+    "toolbar": true,
+    "frame": true,
+    "width": 1024,
+    "height": 768,
+    "min_width": 640,
+    "min_height": 480
+  }
+}

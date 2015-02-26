@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App-Imprenta">
+	<head>
+		<meta charset="UTF-8">
+		<title>App</title>
+		<link rel="stylesheet" type="text/css" href="../libs/semantic-ui/dist/semantic.css">
+	</head>
+	<body ng-controller="mainController">
+		<div>
+    		<!-- Link para las distintas vistas -->
+    		<a ui-sref="menuTrabajos">Menu Trabajos</a>
+    		<a ui-sref="menuClientes">Menu Clientes</a>
+		</div>
+		<div>
+    		<div ui-view></div>
+		</div>		
+
+		<!-- Librerias externas -->
+		<script src="../libs/jquery/jquery.js"></script>
+		<script src="../libs/semantic-ui/dist/semantic.js"></script>
+		<script src="../libs/angular/angular.js"></script>
+		<script src="../libs/angular-ui-router/release/angular-ui-router.js"></script>
+		
+		<!-- Librerias propias de esta app -->
+		<script src="configures/configure.js"></script>
+		<script src="controllers/mainController.js"></script>
+		<script src="controllers/menuClientes.js"></script>
+		<script src="controllers/menuTrabajos.js"></script>
+		<script src="controllers/controllerClientes.js"></script>
+		<script src="controllers/controllerTrabajos.js"></script>
+		<script src="routers/routers.js"></script>
+		<script src="services/servicesClientes.js"></script>
+		<script src="services/servicesTrabajos.js"></script>
+	</body>
+</html>

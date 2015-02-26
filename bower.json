@@ -1,0 +1,14 @@
+{
+  "name": "Manager-Work-Customers",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cachi87/Manager-Work-Customers",
+  "authors": [
+    "Facundo Segarra <facundosegarra@yahoo.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3.14",
+    "semantic-ui": "~1.10.2",
+    "angular-ui-router": "~0.2.13"
+  }
+}
