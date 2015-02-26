@@ -7,17 +7,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('trabajos', {
       url: "trabajos",
-      templateUrl: "scripts/views/trabajos.html",
+      templateUrl: "views/trabajos.html",
       controller: "menuTrabajos"
     })
     .state('trabajos.detail', {
       url: ".detail",
       views: {  "viewA": {
-                          templateUrl: "scripts/views/trabajo-listado.html",
+                          templateUrl: "views/trabajo-listado.html",
                           controller: "controllerTrabajos"
                          },
                 "viewB": {
-                          templateUrl: "scripts/views/trabajo-detail.html",
+                          templateUrl: "views/trabajo-detail.html",
                           controller: "controllerTrabajos"
                          }
              }
@@ -26,28 +26,28 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: ".new",
       views: {
                 "viewA": {
-                          templateUrl: "scripts/views/trabajo-new.html",
+                          templateUrl: "views/trabajo-new.html",
                           controller: "controllerTrabajos"
                           },
                 "viewB": {
-                          templateUrl: "scripts/views/trabajo-tools.html",
+                          templateUrl: "views/trabajo-tools.html",
                           controller: "controllerTrabajos"
                          }
               }
     })
     .state('clientes', {
       url: "clientes",
-      templateUrl: "scripts/views/clientes.html",
+      templateUrl: "views/clientes.html",
       controller: "menuClientes"
     })
     .state('clientes.detail', {
       url: ".detail",
       views: {  "viewA": {
-                          templateUrl: "scripts/views/cliente-listado.html",
+                          templateUrl: "views/cliente-listado.html",
                           controller: "controllerClientes"
                          },
                 "viewB": {
-                          templateUrl: "scripts/views/cliente-detail.html",
+                          templateUrl: "views/cliente-detail.html",
                           controller: "controllerClientes"
                          }
              }
@@ -56,11 +56,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: ".new",
       views: {
                 "viewA": {
-                          templateUrl: "scripts/views/cliente-new.html",
+                          templateUrl: "views/cliente-new.html",
                           controller: "controllerClientes"
                           },
                 "viewB": {
-                          templateUrl: "scripts/views/cliente-tools.html",
+                          templateUrl: "views/cliente-tools.html",
                           controller: "controllerClientes"
                          }
               }
