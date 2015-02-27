@@ -13,22 +13,22 @@
     <div class="two fields">
       <div class="required field">
         <label>Apellido</label>
-        <input type="text" name="apellido" placeholder="Apellido">
+        <input type="text" name="apellido" ng-model="cliente.mail" placeholder="Apellido">
       </div>
       <div class="field">
         <label>Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="text" name="nombre" ng-model="cliente.mail" placeholder="Nombre">
       </div>
     </div>
     
     <div class="two fields">
       <div class="field">
-        <label>CUIT o CUIL</label>        
-        <input type="text" name="cuitCuil" placeholder="CUIT o CUIL"> 
+        <label>Cuit o cuil</label>        
+        <input type="text" name="cuitCuil" ng-model="cliente.mail" placeholder="CUIT o CUIL"> 
       </div>
       <div class="field">
         <label>Tipo de Cliente</label>
-        <select class="ui search dropdown">
+        <select class="ui search dropdown" ng-model="cliente.tipoCliente" name="tipoCliente" ng-options="tipoCliente.valor for tipoCliente in tiposClientes">
           <option value=""><-Tipo de cliente-></option>
           <option value="RI">Responsable Inscripto</option>
         </select>

@@ -1,7 +1,7 @@
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("trabajos.listado");
+  $urlRouterProvider.otherwise("clientes.detail");
   //
   // Now set up the states
   $stateProvider
