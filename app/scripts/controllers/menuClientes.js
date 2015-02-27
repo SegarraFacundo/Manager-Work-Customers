@@ -11,7 +11,6 @@ app.controller('menuClientes', ['$scope','servicesClientes', function($scope, Cl
     	Clientes.find({}, function(err, docs){
       		$scope.clientes = docs;
       		$scope.$apply();
-    })
-  }
- 
+    	})
+  	} 
 }]);

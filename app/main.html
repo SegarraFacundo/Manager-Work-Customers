@@ -5,9 +5,9 @@
 		<title>App</title>
 		<link rel="stylesheet" type="text/css" href="../libs/semantic-ui/dist/semantic.css">
 	</head>
-	<body ng-controller="mainController"  class="ui inverted segment">
-		<div class="ui tiered teal menu">
-		  <div class="menu">
+	<body ng-controller="mainController" class="ui inverted segment">
+		<div class="ui tiered menu">
+		  <div class="ui inverted teal menu">
 		    <a class="item" ui-sref="trabajos.detail">
 		      <i class="grid layout icon"></i>
 		      Trabajos
@@ -42,11 +42,6 @@
 		        </div>
 		      </div>
 		    </div>
-		  </div>
-		  <div class="ui sub menu" ng-repeat="item to items">
-		    <a class="active item">Pendientes</a>
-		    <a class="item">Add</a>
-		    <a class="item">Remove</a>
 		  </div>
 		</div>
 	 	<div ui-view></div>		
