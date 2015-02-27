@@ -21,7 +21,7 @@
   },
   "window": {
     "title": "App Imprenta",
-    "toolbar": true,
+    "toolbar": false,
     "frame": true,
     "width": 800,
     "height": 600,
