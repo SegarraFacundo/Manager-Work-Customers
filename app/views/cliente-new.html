@@ -9,92 +9,97 @@
         <div class="sub header">Formulario</div>
       </div>
     </div>
-
+    
     <div class="two fields">
       <div class="required field">
-        <label>Apellido</label>
-        <input type="text" name="apellido" ng-model="cliente.mail" placeholder="Apellido">
+        <label>Denominación</label>
+        <input type="text" name="denominacion" ng-model="cliente.denominacion" placeholder="Denominación">
       </div>
       <div class="field">
-        <label>Nombre</label>
-        <input type="text" name="nombre" ng-model="cliente.mail" placeholder="Nombre">
+        <label>Código de próxima autorización</label>
+        <input type="text" name="codProxAuto" ng-model="cliente.codProxAuto" placeholder="Código próxima autorización">
       </div>
     </div>
     
+    
     <div class="two fields">
-      <div class="field">
-        <label>Cuit o cuil</label>        
-        <input type="text" name="cuitCuil" ng-model="cliente.mail" placeholder="CUIT o CUIL"> 
+      <div class="required field">
+        <label>Apellido</label>
+        <input type="text" name="apellido" ng-model="cliente.apellido" placeholder="Apellido">
       </div>
       <div class="field">
-        <label>Tipo de Cliente</label>
-        <select class="ui search dropdown" ng-model="cliente.tipoCliente" name="tipoCliente" ng-options="tipoCliente.valor for tipoCliente in tiposClientes">
-          <option value=""><-Tipo de cliente-></option>
-          <option value="RI">Responsable Inscripto</option>
+        <label>Nombre</label>
+        <input type="text" name="nombre" ng-model="cliente.nombre" placeholder="Nombre">
+      </div>
+    </div>
+    
+    <div class="three fields">
+      <div class="field">
+        <label>CUIT o CUIL</label>        
+        <input type="text" name="cuitCuil" ng-model="cliente.cuitCuil" placeholder="CUIT o CUIL"> 
+      </div>
+      <div class="field">
+        <label>Tipo de cliente</label>
+        <select class="ui dropdown tipoCliente" ng-options="item.valor for item in tiposClientes track by item.valor" ng-model="cliente.tipoCliente">
+          <option value=""></option>
         </select>
+      </div>
+      <script>    
+        $('select.tipoCliente')
+          .dropdown();
+      </script>
+
+      <div class="field">
+        <label>Fecha inicio actividad</label>
+        <input type="date" name="fechaInicio" ng-model="cliente.fechaInicio">
       </div>
     </div>
 
     <div class="two fields">
       <div class="field">
         <label>Teléfono</label>
-        <input type="text" name="nombre" placeholder="Teléfono">
+        <input type="text" name="telefono" ng-model="cliente.telefono" placeholder="Teléfono">
       </div>
       <div class="field">
         <label>E-mail</label>
-        <input type="email" name="email" placeholder="Email">
+        <input type="email" name="email" ng-model="cliente.email" placeholder="E-mail">
       </div>  
     </div>
 
     <div class="required three fields">
       <div class="field">
         <label>Dirección</label>        
-        <input type="text" name="direccion" placeholder="Dirección">        
-      </div>
-      <div class="field">
-        <label>Ciudad</label>
-        <select class="ui search dropdown">
-          <option value="">Ciudad</option>
-          <option value="CA">Casilda</option>
-        </select>
+        <input type="text" name="direccion" ng-model="cliente.direccion" placeholder="Dirección">        
       </div>
       <div class="field">
         <label>Provincia</label>
-        <select class="ui search dropdown">
-          <option value="">Provincia</option>
-          <option value="SF">Santa Fe</option>
+        <select class="ui dropdown provincias" ng-options="item.nombre for item in provincias track by item.nombre" ng-model="cliente.provincia">
+          <option value=""></option>
         </select>
       </div>
-    </div>
-
-    <div class="two fields">
+      <script>    
+        $('select.provincias')
+          .dropdown();
+      </script>
       <div class="field">
-        <label>Fecha inicio actividad</label>
-          <div class="field">
-            <input type="date" name="fechaInicio">
-          </div>
+        <label>Localidad</label>
+        <select class="ui dropdown localidad" ng-options="item.nombre as item.nombre for item in localidades track by item.nombre" ng-model="cliente.localidad">
+          <option value=""></option>
+        </select>
       </div>
-      <div class="required field">
-        <label>Genero</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <div class="default text">Genero</div>
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <div class="item" data-value="male">Masculino</div>
-            <div class="item" data-value="female">Femenino</div>
-          </div>
-        </div>
-      </div>
+      <script>    
+        $('select.localidad')
+          .dropdown();
+      </script>
     </div>
     
     <div class="field">
       <label>Datos extras</label>
-      <textarea></textarea>
+      <textarea ng-model="cliente.extra"></textarea>
     </div>
     <div class="ui teal dividing header"></div>
     <div class="ui buttons">
-      <div class="positive ui button">Guardar</div>
+      <div class="positive ui button" ng-click="agregarCliente()">Guardar</div>
       <div class="or"></div>
       <div class="negative ui button">Cancelar</div>
     </div>

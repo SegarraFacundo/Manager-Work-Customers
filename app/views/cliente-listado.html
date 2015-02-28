@@ -1,57 +1,22 @@
 <div class="ui piled segment">
-    <div class="ui teal dividing header">
-      <i class="user icon"></i>
+  <div class="ui teal dividing header">
+    <i class="user icon"></i>
+    <div class="content">
+      Clientes
+      <div class="sub header">Listado</div>
+    </div>
+  </div>
+  <div class="ui fluid icon input">
+    <input type="text" placeholder="Buscar...">
+    <i class="search icon"></i>
+  </div>
+  <div class="ui divided very relaxed animated list">
+    <div class="item" ng-repeat="cliente in clientes | orderBy: ordenSeleccionado | filter: buscado">
+      <i class="ui top teal aligned big settings icon"></i>
       <div class="content">
-        Clientes
-        <div class="sub header">Listado</div>
+        <div class="header">{{cliente.nombre}} {{cliente.apellido}}</div>
+        {{cliente.cuitCuil}}
       </div>
     </div>
-      <div class="ui fluid icon input">
-        <input type="text" placeholder="Buscar...">
-        <i class="search icon"></i>
-      </div>
-    <div class="ui divided very relaxed animated list">
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Santiago Peralta</div>
-          Description
-        </div>
-      </div>
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Guido Marcos</div>
-          Description
-        </div>
-      </div>
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Facundo Segarra</div>
-          Description
-        </div>
-      </div>
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Fran Alain</div>
-          Description
-        </div>
-      </div>
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Duarte Jesica</div>
-          Description
-        </div>
-      </div>
-      <div class="item">
-        <i class="ui top teal aligned big settings icon"></i>
-        <div class="content">
-          <div class="ui teal header">Lench Walcon</div>
-          Description
-        </div>
-      </div>
-    </div>
+  </div>
 </div>

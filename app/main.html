@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="App-Imprenta">
+<html lang="en" ng-app="Imprenta">
 	<head>
 		<meta charset="UTF-8">
 		<title>App</title>
 		<link rel="stylesheet" type="text/css" href="../libs/semantic-ui/dist/semantic.css">
 	</head>
-	<body ng-controller="mainController" class="ui inverted segment">
+	<body ng-controller="mainCtrl" class="ui inverted segment">
 		<div class="ui tiered menu">
 		  <div class="ui inverted teal menu">
 		    <a class="item" ui-sref="trabajos.detail">
@@ -47,14 +47,16 @@
 		<script src="../libs/angular-ui-router/release/angular-ui-router.js"></script>
 		
 		<!-- Librerias propias de esta app -->
-		<script src="scripts/configures/configure.js"></script>
-		<script src="scripts/controllers/mainController.js"></script>
-		<script src="scripts/controllers/menuClientes.js"></script>
-		<script src="scripts/controllers/menuTrabajos.js"></script>
-		<script src="scripts/controllers/controllerClientes.js"></script>
-		<script src="scripts/controllers/controllerTrabajos.js"></script>
-		<script src="scripts/services/servicesClientes.js"></script>
-		<script src="scripts/services/servicesTrabajos.js"></script>
+		
+		<script src="scripts/controllers/mainCtrl.js"></script>
+		<script src="scripts/controllers/clienteCtrl.js"></script>
+		<script src="scripts/controllers/clienteDetailCtrl.js"></script>
+		<script src="scripts/controllers/clienteNewCtrl.js"></script>
+		<script src="scripts/controllers/clienteListCtrl.js"></script>
+
+		<script src="scripts/services/baseDeDatos.js"></script>
+		<script src="scripts/services/nwgui.js"></script>
+		
 		<script src="scripts/routers/routers.js"></script>
 
 	</body>
